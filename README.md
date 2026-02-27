@@ -11,6 +11,8 @@ This is a Kotlin Multiplatform project targeting Android, iOS, Desktop (JVM).
 
 * [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
   you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+* [/androidApp](./androidApp/src/main) contains the Android application packaging module.
+  The shared Android code and UI live in [/composeApp](./composeApp/src/androidMain).
 
 ### Build and Run Android Application
 
@@ -18,11 +20,11 @@ To build and run the development version of the Android app, use the run configu
 in your IDE’s toolbar or build it directly from the terminal:
 - on macOS/Linux
   ```shell
-  ./gradlew :composeApp:assembleDebug
+  ./gradlew :androidApp:assembleDebug
   ```
 - on Windows
   ```shell
-  .\gradlew.bat :composeApp:assembleDebug
+  .\gradlew.bat :androidApp:assembleDebug
   ```
 
 ### Build and Run Desktop (JVM) Application
